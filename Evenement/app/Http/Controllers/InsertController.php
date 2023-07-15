@@ -261,12 +261,4 @@ class InsertController extends Controller
         return view("liste_devis", compact("liste_event"));
     }
 
-    public function update_so($id){
-        $sono = Event_Sono::find($id);
-        $liste_event = Evenement::orderBy("id","asc")->get();
-       
-
-        return view("ModifSono", compact("liste_event", "sono"));
-    }
-
 }
